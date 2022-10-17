@@ -12,6 +12,8 @@ import { TagModule } from 'primeng/tag';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
+import {MenubarModule} from 'primeng/menubar';
+
 
 
 
@@ -33,7 +35,8 @@ import { ButtonModule } from 'primeng/button';
     TagModule,
     AutoCompleteModule,
     BrowserAnimationsModule,
-    ButtonModule
+    ButtonModule,
+    MenubarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
