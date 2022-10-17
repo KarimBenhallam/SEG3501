@@ -40,7 +40,7 @@ export class ListComponent implements OnInit {
   }
 
   redirect(event: any) {
-    this.router.navigate([`/researchers/${event.data.id}`]);
+    // this.router.navigate([`/researchers/${event.data.id}`]);
   }
   
   clear(table: Table) {
