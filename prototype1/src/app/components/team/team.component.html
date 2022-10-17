@@ -1,0 +1,67 @@
+<div class="card">
+    <p-table #dt1 [value]="selectedResearchers" selectionMode="single">
+        <ng-template pTemplate="caption">
+            Équipe Personalisée
+            <div class="sticky left-100 mt-1">
+                <p-autoComplete [suggestions]="filteredResearchers" (completeMethod)="searchResearcher($event)" field="lastName"
+                    appendTo="body" [dropdown]="true" placeholder="Chercheur à ajouter"
+                    [style]="{width: '100%'}" (onSelect)="addResearcher($event)">
+                </p-autoComplete>
+            </div>
+            <div *ngIf="selectedResearchers.length>0" class="mt-1">
+                Score d'interdisciplinarité: 
+                <span *ngIf="score==1">
+                    <p-tag styleClass="mr-2" severity="danger" value="Bas"></p-tag>
+                </span>
+
+                <span *ngIf="score==2"> 
+                    <p-tag styleClass="mr-2" severity="warning" value="Moyen"></p-tag>
+                    
+                </span>
+
+                <span *ngIf="score==3"> 
+                    <p-tag styleClass="mr-2" severity="primary" value="Bon"></p-tag>
+                    
+                </span>
+
+                <span *ngIf="score==4"> 
+                    <p-tag styleClass="mr-2" severity="success" value="Excellent"></p-tag>
+                </span>
+
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Faculté</th>
+                <th></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-researcher let-index>
+            <tr>
+                <td>
+                    {{researcher.firstName}}
+                </td>
+                <td>
+                    {{researcher.lastName}}
+                </td>
+                <td *ngIf="researcher.faculty === 0"><span class="p-column-title">Faculté</span>
+                    <p-tag styleClass="mr-auto" severity="warning" value="Génie"></p-tag>
+                </td>
+                <td *ngIf="researcher.faculty === 1"><span class="p-column-title">Faculté</span>
+                    <p-tag styleClass="mr-2" severity="primary" value="Sciences Sociales"></p-tag>
+                </td>
+                <td *ngIf="researcher.faculty === 2"><span class="p-column-title">Faculté</span>
+                    <p-tag styleClass="mr-2" severity="success" value="Sciences"></p-tag>
+                </td>
+                <td *ngIf="researcher.faculty === 3"><span class="p-column-title">Faculté</span>
+                    <p-tag styleClass="mr-2" severity="danger" value="Telfer"></p-tag>
+                </td>
+                <td>
+                    <button pButton pRipple type="button" icon="pi pi-trash" class="p-button-rounded p-button-text p-button-danger" (click)="remove(index, researcher)"></button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
