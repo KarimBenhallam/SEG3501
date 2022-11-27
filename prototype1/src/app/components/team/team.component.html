@@ -8,27 +8,27 @@
                     [style]="{width: '100%'}" (onSelect)="addResearcher($event)">
                 </p-autoComplete>
             </div>
-            <div *ngIf="selectedResearchers.length>0" class="mt-1">
-                Score d'interdisciplinarité: 
+            <!--div *ngIf="selectedResearchers.length>0" class="mt-1">
+                Score d'interdisciplinarité:
                 <span *ngIf="score==1">
                     <p-tag styleClass="mr-2" severity="danger" value="Bas"></p-tag>
                 </span>
 
-                <span *ngIf="score==2"> 
+                <span *ngIf="score==2">
                     <p-tag styleClass="mr-2" severity="warning" value="Moyen"></p-tag>
-                    
+
                 </span>
 
-                <span *ngIf="score==3"> 
+                <span *ngIf="score==3">
                     <p-tag styleClass="mr-2" severity="primary" value="Bon"></p-tag>
-                    
+
                 </span>
 
-                <span *ngIf="score==4"> 
+                <span *ngIf="score==4">
                     <p-tag styleClass="mr-2" severity="success" value="Excellent"></p-tag>
                 </span>
 
-            </div>
+            </div-->
         </ng-template>
         <ng-template pTemplate="header">
             <tr>
