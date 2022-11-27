@@ -13,7 +13,7 @@ export class TeamComponent implements OnInit {
   selectedResearchers : Researcher[];
   filteredResearchers : Researcher[];
   score : number;
-  faculties : number[]
+  faculties : string[]
 
 
   constructor(private researchService : ResearchService) {
@@ -22,7 +22,7 @@ export class TeamComponent implements OnInit {
     this.filteredResearchers = [];
     this.score = 0;
     this.faculties = []
-    
+
    }
 
   ngOnInit(): void {
@@ -39,30 +39,30 @@ export class TeamComponent implements OnInit {
     this.selectedResearchers.push(selectedSearcher);
     this.researchers.splice(this.researchers.lastIndexOf(selectedSearcher), 1)
     this.faculties.push(selectedSearcher.faculty)
-    this.updateScore()
+    //this.updateScore()
   }
 
   remove(index : number, researcher : Researcher){
     this.selectedResearchers.splice(index,1)
     this.faculties.splice(index,1)
     this.researchers.push(researcher)
-    this.updateScore()
+    //this.updateScore()
   }
 
-  updateScore(){
-    this.score = 0;
-    if (this.faculties.includes(0)){
-      this.score ++
-    }
-    if (this.faculties.includes(1)){
-      this.score ++
-    }
-    if (this.faculties.includes(2)){
-      this.score ++
-    }
-    if (this.faculties.includes(3)){
-      this.score ++
-    }
-  }
+  //updateScore(){
+    //this.score = 0;
+    //if (this.faculties.includes(0)){
+      //this.score ++
+    //}
+    //if (this.faculties.includes(1)){
+      //this.score ++
+    //}
+    //if (this.faculties.includes(2)){
+      //this.score ++
+    //}
+    //if (this.faculties.includes(3)){
+      //this.score ++
+    //}
+  //}
 
 }

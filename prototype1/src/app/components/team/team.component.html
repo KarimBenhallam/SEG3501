@@ -46,16 +46,16 @@
                 <td>
                     {{researcher.lastName}}
                 </td>
-                <td *ngIf="researcher.faculty === 0"><span class="p-column-title">Faculté</span>
+                <td *ngIf="researcher.faculty === 'Génie'"><span class="p-column-title">Faculté</span>
                     <p-tag styleClass="mr-auto" severity="warning" value="Génie"></p-tag>
                 </td>
-                <td *ngIf="researcher.faculty === 1"><span class="p-column-title">Faculté</span>
+                <td *ngIf="researcher.faculty === 'Sciences Sociales'"><span class="p-column-title">Faculté</span>
                     <p-tag styleClass="mr-2" severity="primary" value="Sciences Sociales"></p-tag>
                 </td>
-                <td *ngIf="researcher.faculty === 2"><span class="p-column-title">Faculté</span>
+                <td *ngIf="researcher.faculty === 'Sciences'"><span class="p-column-title">Faculté</span>
                     <p-tag styleClass="mr-2" severity="success" value="Sciences"></p-tag>
                 </td>
-                <td *ngIf="researcher.faculty === 3"><span class="p-column-title">Faculté</span>
+                <td *ngIf="researcher.faculty === 'Telfer'"><span class="p-column-title">Faculté</span>
                     <p-tag styleClass="mr-2" severity="danger" value="Telfer"></p-tag>
                 </td>
                 <td>

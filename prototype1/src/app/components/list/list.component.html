@@ -1,6 +1,6 @@
 <div class="card">
     <p-table #dt1 [value]="researchers" (sortFunction)="customSort($event)" selectionMode="single" [customSort]="true"
-        [globalFilterFields]="['firstName', 'lastName']" (onRowSelect)="redirect($event)">
+        [globalFilterFields]="['firstName', 'lastName', 'interests', 'faculty']" (onRowSelect)="redirect($event)">
         <ng-template pTemplate="caption">
             Liste Des Chercheurs
             <div class="flex">
@@ -42,16 +42,16 @@
                         <p-tag styleClass="mr-2" severity="info" value="Intelligence Artificielle"></p-tag>
                     </div>
                 </td>
-                <td *ngIf="researcher.faculty === 0"><span class="p-column-title">Faculté</span>
+                <td *ngIf="researcher.faculty === 'Génie'"><span class="p-column-title">Faculté</span>
                     <p-tag styleClass="mr-auto" severity="warning" value="Génie"></p-tag>
                 </td>
-                <td *ngIf="researcher.faculty === 1"><span class="p-column-title">Faculté</span>
+                <td *ngIf="researcher.faculty === 'Sciences Sociales'"><span class="p-column-title">Faculté</span>
                     <p-tag styleClass="mr-2" severity="primary" value="Sciences Sociales"></p-tag>
                 </td>
-                <td *ngIf="researcher.faculty === 2"><span class="p-column-title">Faculté</span>
+                <td *ngIf="researcher.faculty === 'Sciences'"><span class="p-column-title">Faculté</span>
                     <p-tag styleClass="mr-2" severity="success" value="Sciences"></p-tag>
                 </td>
-                <td *ngIf="researcher.faculty === 3"><span class="p-column-title">Faculté</span>
+                <td *ngIf="researcher.faculty === 'Telfer'"><span class="p-column-title">Faculté</span>
                     <p-tag styleClass="mr-2" severity="danger" value="Telfer"></p-tag>
                 </td>
                 </tr>
