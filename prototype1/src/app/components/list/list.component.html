@@ -32,13 +32,13 @@
                     {{researcher.lastName}}
                 </td>
                 <td>
-                    <div *ngIf="researcher.interests.includes(0)" class="mb-1">
+                    <div *ngIf="researcher.interests.includes('Bio-Technologie')" class="mb-1">
                         <p-tag styleClass="mr-2" severity="info" value="Bio-Technologie"></p-tag>
                     </div>
-                    <div *ngIf="researcher.interests.includes(1)" class="mb-1">
+                    <div *ngIf="researcher.interests.includes('Gènes et évolution')" class="mb-1">
                         <p-tag styleClass="mr-2" severity="info" value="Gènes et évolution"></p-tag>
                     </div>
-                    <div *ngIf="researcher.interests.includes(2)" class="mb-1">
+                    <div *ngIf="researcher.interests.includes('Intelligence Artificielle')" class="mb-1">
                         <p-tag styleClass="mr-2" severity="info" value="Intelligence Artificielle"></p-tag>
                     </div>
                 </td>

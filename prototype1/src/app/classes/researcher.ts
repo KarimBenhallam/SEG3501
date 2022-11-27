@@ -4,14 +4,14 @@ export class Researcher {
    id : number;
    firstName : string;
    lastName : string;
-   interests : number[];
+   interests : string[];
    faculty : string;
    research : Research[]
 
    constructor(id : number,
     firstName : string,
     lastName : string,
-    interests : number[],
+    interests : string[],
     faculty : string,
     research : Research[]){
 
