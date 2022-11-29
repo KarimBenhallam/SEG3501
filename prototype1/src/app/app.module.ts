@@ -13,11 +13,9 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import {MenubarModule} from 'primeng/menubar';
-
-
-
-
-
+import { TeamsComponent } from './components/teams/teams.component';
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -25,7 +23,8 @@ import {MenubarModule} from 'primeng/menubar';
     AppComponent,
     ListComponent,
     TeamComponent,
-    NavbarComponent
+    NavbarComponent,
+    TeamsComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +35,9 @@ import {MenubarModule} from 'primeng/menubar';
     AutoCompleteModule,
     BrowserAnimationsModule,
     ButtonModule,
-    MenubarModule
+    MenubarModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

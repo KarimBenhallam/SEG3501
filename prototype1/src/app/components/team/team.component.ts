@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { Researcher } from 'src/app/classes/researcher';
 import { ResearchService } from 'src/app/services/research.service';
 
@@ -48,7 +48,10 @@ export class TeamComponent implements OnInit {
     this.researchers.push(researcher)
     //this.updateScore()
   }
-
+  @Output() event = new EventEmitter<Researcher[]>();
+  createTeam(){
+    this.event.emit(this.selectedResearchers);
+  }
   //updateScore(){
     //this.score = 0;
     //if (this.faculties.includes(0)){

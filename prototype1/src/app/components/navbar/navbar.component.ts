@@ -15,6 +15,11 @@ export class NavbarComponent implements OnInit {
       label: "Formation d'équipes",
       icon: 'pi pi-fw pi-user-plus',
       routerLink: '/team'
+    },
+    {
+      label: "Listes d'équipes",
+      icon: 'pi pi-fw pi-users',
+      routerLink: '/teams'
     }
   ];
 
