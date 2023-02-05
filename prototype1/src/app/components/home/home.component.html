@@ -1,0 +1,21 @@
+<div id="title">
+    SELEC
+</div>
+<div style="margin-left:37%;">
+    <p-autoComplete [suggestions]="filteredResearchAreas" (completeMethod)="searchResearchArea($event)"
+    [dropdown]="true" [multiple]="true" field="name" appendTo="body"></p-autoComplete> 
+
+    <button _ngcontent-auq-c100="" pbutton="" pripple="" type="button" icon="pi pi-search" (onClick)="search()"
+    class="p-element p-ripple p-button-rounded p-button-primary p-button-outlined p-button p-component p-button-icon-only ml-2">
+        <span class="p-button-icon pi pi-search" aria-hidden="true"></span><span class="p-ink" style="height: 42px; width: 42px; top: -6.25px; left: -0.5px;"></span></button>
+</div>
+    
+        <div class="mt-2" style="margin-left: 35%;">
+            <p-checkbox label="Toutes"  [(ngModel)]="selectedAll" [disabled]="false" [binary]="true"></p-checkbox>
+            <p-checkbox label="Sciences" name="Sciences" value="Sciences" [(ngModel)]="selectedFaculties" [disabled]="selectedAll"></p-checkbox>
+            <p-checkbox label="Génie" name="Génie" value="Génie" [(ngModel)]="selectedFaculties" [disabled]="selectedAll"></p-checkbox>
+            <p-checkbox label="Telfer" name="Telfer" value="Telfer" [(ngModel)]="selectedFaculties" [disabled]="selectedAll"></p-checkbox>
+            <p-checkbox label="Sciences Sociales" name="Sciences Sociales" value="Sciences Sociales" [(ngModel)]="selectedFaculties" [disabled]="selectedAll"></p-checkbox>
+        </div>
+
+

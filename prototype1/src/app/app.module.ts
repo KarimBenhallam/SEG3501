@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListComponent } from './components/list/list.component';
@@ -16,6 +16,8 @@ import {MenubarModule} from 'primeng/menubar';
 import { TeamsComponent } from './components/teams/teams.component';
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
+import { HomeComponent } from './components/home/home.component';
+import {CheckboxModule} from 'primeng/checkbox';
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import {MatIconModule} from "@angular/material/icon";
     ListComponent,
     TeamComponent,
     NavbarComponent,
-    TeamsComponent
+    TeamsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,9 @@ import {MatIconModule} from "@angular/material/icon";
     ButtonModule,
     MenubarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    CheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
